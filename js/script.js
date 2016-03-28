@@ -11,6 +11,39 @@
 
 
 //Jquery Way!
-$('#myinput').keyup(function(){
-	$('#inputText').html($('#myInput').val());
-})
+// 
+
+var myApp = angular.module('myApp', []);
+//console.log(myApp);
+
+myApp.controller('myController', function($scope){
+	// $scope.first = "Jeremy";
+	// $scope.last = "Hilliard";
+
+	$scope.dcClass = [
+		'Tristan', 
+		'Josh',
+		'Bogden',
+		'Lazlo',
+		'Keith',
+		'Will',
+		'Curtis',
+		'Joe',
+		'Kochan',
+		'Patrick',
+		'Jonathan',
+		'Jeremy'
+	];
+
+	$scope.addStudent = function(){
+		$scope.dcClass.push($scope.newStudent);
+		$scope.newStudent = '';
+	}
+	
+	$scope.removeStudent = function(student){
+		var i = $scope.dcClass.indexOf(student);
+		console.log(i);
+		$scope.dcClass.splice(i,1); 
+	
+	}
+});
