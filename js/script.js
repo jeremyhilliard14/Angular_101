@@ -20,19 +20,34 @@ myApp.controller('myController', function($scope){
 	// $scope.first = "Jeremy";
 	// $scope.last = "Hilliard";
 
-	$scope.dcClass = [
-		'Tristan', 
-		'Josh',
-		'Bogden',
-		'Lazlo',
-		'Keith',
-		'Will',
-		'Curtis',
-		'Joe',
-		'Kochan',
-		'Patrick',
-		'Jonathan',
-		'Jeremy'
+	// $scope.dcClass = [
+	// 	'Tristan', 
+	// 	'Josh',
+	// 	'Bogden',
+	// 	'Lazlo',
+	// 	'Keith',
+	// 	'Will',
+	// 	'Curtis',
+	// 	'Joe',
+	// 	'Kochan',
+	// 	'Patrick',
+	// 	'Jonathan',
+	// 	'Jeremy'
+	// ];
+
+	$scope.cities = [
+		{
+			name: "Atlanta",
+			population: 500000
+		},
+		{
+			name: "Houston",
+			population: 2200000
+		},
+		{
+			name: "Portland",
+			population: 610000
+		}
 	];
 
 	$scope.addStudent = function(){
