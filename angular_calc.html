@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title></title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script type="text/javascript" src="js/calc_controller.js"></script>
+
+
+</head>
+<body ng-controller="myController">
+
+	<form ng-submit="multiplyValues();">
+		Value One<input type="text" ng-model="value_one">*
+		Value Two<input type="text" ng-model="value_two">
+		<input type="submit" ng-model="newValue">
+	</form>
+	<div id="display">
+		Answer: {{newValue}}
+	</div>
+
+</body>
+</html>
