@@ -65,8 +65,23 @@ myApp.controller('myController', function($scope){
 	];
 
 	$scope.addCountry = function(){
-		$scope.countries.push($scope.newCountry);
+		$scope.tempID = 'test div';
+		$scope.message = 'Your country was added!';
+		$scope.countries.push(
+		{
+			name: $scope.name,
+			population: $scope.population,
+			leader: $scope.leader,
+			flagColors: $scope.flagColors
+		}
+		);
 	 	$scope.newCountry = '';
 		// console.log(newCountry);
+	}
+
+	$scope.removeCountry = function(i){
+		$scope.message = $scope.countries[i].name + ' was removed!';
+		$scope.countries.splice(i,1);
+		$scope.tempID = 'test div';
 	}
 });
