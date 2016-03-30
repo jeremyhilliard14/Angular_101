@@ -79,9 +79,9 @@ myApp.controller('myController', function($scope){
 		// console.log(newCountry);
 	}
 
-	$scope.removeCountry = function(i){
-		$scope.message = $scope.countries[i].name + ' was removed!';
-		$scope.countries.splice(i,1);
-		$scope.tempID = 'test div';
-	}
+	// $scope.removeCountry = function(i){
+	// 	$scope.message = $scope.countries[i].name + ' was removed!';
+	// 	$scope.countries.splice(i,1);
+	// 	$scope.tempID = 'test div';
+	// }
 });

@@ -1,0 +1,11 @@
+ img {
+  width: 100%;
+  height: 396px;
+  margin-bottom: 10px;
+  border: 2px solid #c4c4c4;
+}
+
+#header{
+  text-align: center;
+  font-size: 40px;
+}
