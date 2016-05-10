@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="viewsApp">
+<head>
+	<title></title>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.3/angular-animate.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.3/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/angular-local-storage.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+	
+	<style type="text/css">
+		/* The starting CSS styles for the enter animation */
+		.fade.ng-enter {
+		  transition:0.5s linear all;
+		  opacity:0;
+		}
+
+		/* The finishing CSS styles for the enter animation */
+		.fade.ng-enter.ng-enter-active {
+		  opacity:1;
+		}
+	</style>
+</head>
+<body ng-controller="viewsController">
+
+	<div ng-if="bool" class="fade">
+  		Fade me in out
+	</div>
+		<button ng-click="bool=true">Fade In!</button>
+		<button ng-click="bool=false">Fade Out!</button>
+
+	<div id="wrapper">
+
+		<div class="myViews" ng-view></div>
+		<!-- <a href="#/0">Go to template 0</a> -->
+
+	</div>
+
+</body>
+</html>
